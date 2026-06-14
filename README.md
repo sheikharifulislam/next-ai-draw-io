@@ -43,6 +43,8 @@ https://github.com/user-attachments/assets/9d60a3e8-4a1c-4b5e-acbb-26af2d3eabd1
     - [Deploy on Vercel](#deploy-on-vercel)
     - [Deploy on Cloudflare Workers](#deploy-on-cloudflare-workers)
   - [Multi-Provider Support](#multi-provider-support)
+    - [Server-Side Multi-Model Configuration](#server-side-multi-model-configuration)
+    - [Admin Panel](#admin-panel)
   - [How It Works](#how-it-works)
   - [Support \& Contact](#support--contact)
   - [FAQ](#faq)
@@ -223,6 +225,12 @@ All providers except AWS Bedrock and OpenRouter support custom endpoints.
 ### Server-Side Multi-Model Configuration
 
 Administrators can configure multiple server-side models that are available to all users without requiring personal API keys. Configure via `AI_MODELS_CONFIG` environment variable (JSON string) or `ai-models.json` file.
+
+### Admin Panel
+
+Set the `ADMIN_PASSWORD` environment variable and visit `/admin` to manage server settings (models, access codes, features, observability, quota) from a web panel instead of hand-editing `.env`.
+
+📖 **[Admin Panel Guide](./docs/en/admin-panel.md)** — setup, precedence rules, and notes.
 
 **Model Requirements**: This task requires strong model capabilities for generating long-form text with strict formatting constraints (draw.io XML). Recommended models include Claude Sonnet 4.5, GPT-5.1, Gemini 3 Pro, and DeepSeek V3.2/R1.
 
